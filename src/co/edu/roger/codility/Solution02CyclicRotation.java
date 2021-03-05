@@ -61,7 +61,7 @@ public class Solution02CyclicRotation {
 //        final int input = scanner.nextInt();
 //        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
         Solution02CyclicRotation solution02CyclicRotation = new Solution02CyclicRotation();
-        final int []A = {3, 8, 9, 7, 6};
+        final int A[] = {3, 8, 9, 7, 6};
         final int K = 3;
         System.out.println(Arrays.toString(solution02CyclicRotation.solution(A, K)));
 
