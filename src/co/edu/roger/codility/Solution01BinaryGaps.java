@@ -27,7 +27,7 @@ Write an efficient algorithm for the following assumptions:
 
 N is an integer within the range [1..2,147,483,647].
  */
-public class SolutionBinaryGaps {
+public class Solution01BinaryGaps {
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -66,7 +66,7 @@ public class SolutionBinaryGaps {
     public static void main(String[] args) {
         final int input = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        SolutionBinaryGaps solutionBinaryGaps = new SolutionBinaryGaps();
+        Solution01BinaryGaps solutionBinaryGaps = new Solution01BinaryGaps();
 
 
         System.out.println("Solution:" + solutionBinaryGaps.solution(input));
