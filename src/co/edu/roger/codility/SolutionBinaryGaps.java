@@ -1,6 +1,5 @@
 package co.edu.roger.codility;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 /*
@@ -41,16 +40,19 @@ public class SolutionBinaryGaps {
         int binaryGap = 0;
         int currentCount = 0;
         boolean counting;
+        // Go through the array
         for (int i = 1; i < representationLength; i++) {
             if (binaryRepresentation.charAt(i - 1) == '1' && binaryRepresentation.charAt(i) == '0') {
                 counting = true;
                 currentCount++;
                 i++;
+                // Advance and count the gap until is over or the array finished.
                 while (counting && i < representationLength) {
+                    // Is still a gap
                     if (binaryRepresentation.charAt(i - 1) == '0' && binaryRepresentation.charAt(i) == '0') {
                         currentCount++;
                         i++;
-                    } else {
+                    } else { // Gap is over and the array hasn't finished
                         counting = false;
                         binaryGap = currentCount > binaryGap ? currentCount : binaryGap;
                         currentCount = 0;
