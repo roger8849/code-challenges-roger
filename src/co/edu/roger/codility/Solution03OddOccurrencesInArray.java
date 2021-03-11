@@ -55,7 +55,9 @@ public class Solution03OddOccurrencesInArray {
 
     public static void main(String[] args) {
         Solution03OddOccurrencesInArray solution = new Solution03OddOccurrencesInArray();
-        final int A[] = {9,3,9,3,9,7,9};
+        //final int A[] = {9,3,9,3,9,7,9};
+        final int A[] = {9,3,9,3,9,9,10};
+
         System.out.println(solution.solution(A));
     }
 }
