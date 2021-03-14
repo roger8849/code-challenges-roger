@@ -24,6 +24,7 @@ public class Solution171ExcelSheetColumnNumber {
 
         for (int i = columnTitle.length() - 1; i >= 0 ; i--) {
             answer = answer + (int)((columnTitle.charAt(i) - 64)* multiplier);
+            // If more chars, then we need to multiply by 26.
             multiplier = multiplier * 26;
         }
         return answer;
