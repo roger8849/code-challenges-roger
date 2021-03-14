@@ -14,6 +14,14 @@ package co.edu.roger.leetcode;
  * The string will only contain lowercase characters a-z. The maximum length of the string is 50000.
  */
 public class Solution680ValidPalindromeII {
+    /**
+     * Function will check substrings aftter removing characters.
+     *
+     * @param s
+     * @param start
+     * @param end
+     * @return
+     */
     public boolean checkIsPalindrome(String s, int start, int end) {
         while (start < end) {
             // If removing chars not work, definitiley is false
@@ -22,11 +30,15 @@ public class Solution680ValidPalindromeII {
             }
             start++;
             end--;
-
         }
         return true;
     }
 
+    /**
+     * Main function will check entirely if is palíndrome.
+     * @param s
+     * @return
+     */
     public boolean validPalindrome(String s) {
         int start = 0;
         int end = s.length() - 1;
