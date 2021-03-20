@@ -2,7 +2,7 @@ package co.edu.roger.algorithms;
 
 import java.util.Scanner;
 
-public class Factorial {
+public class RecursionFactorial {
     public int factorial(int n) {
         if(n > 0) {
             return n * factorial(n-1);
@@ -14,8 +14,8 @@ public class Factorial {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Factorial factorial = new Factorial();
+        RecursionFactorial recursionFactorial = new RecursionFactorial();
         int n = scanner.nextInt();
-        System.out.println("factorial 5: " + factorial.factorial(n));
+        System.out.println("factorial 5: " + recursionFactorial.factorial(n));
     }
 }

@@ -2,7 +2,7 @@ package co.edu.roger.algorithms;
 
 import java.util.Scanner;
 
-public class Fibonacci {
+public class RecursionFibonacci {
     public int fibonacci(int n) {
         if( n == 0)// 1st base case no. 1
             return 0;
@@ -18,8 +18,8 @@ public class Fibonacci {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Fibonacci fibonacci = new Fibonacci();
+        RecursionFibonacci recursionFibonacci = new RecursionFibonacci();
         int n = scanner.nextInt();
-        System.out.println("Fibonacci of n=" + n + " is " + fibonacci.fibonacci(n));
+        System.out.println("Fibonacci of n=" + n + " is " + recursionFibonacci.fibonacci(n));
     }
 }

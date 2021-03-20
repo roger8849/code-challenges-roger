@@ -2,7 +2,7 @@ package co.edu.roger.algorithms;
 
 import java.util.Scanner;
 
-public class Power {
+public class RecursionPower {
     public int power(int x, int n) {
         if(n == 0) {// base case 1. never used.
             return 1;
@@ -18,7 +18,7 @@ public class Power {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Power power = new Power();
+        RecursionPower power = new RecursionPower();
         int x = scanner.nextInt();
         int n = scanner.nextInt();
         System.out.println("Power of " + x +"^" + n + " = " + power.power(x, n));
