@@ -9,7 +9,7 @@ public class RecursionQuickSort {
         int end = upperBound;
         while (start < end) {
             // TODO fix with array of two elements.
-            while (array[start] <= pivot) {
+            while (array[start] < pivot) {
                 start++;
             }
             while (array[end] > pivot){
@@ -37,13 +37,13 @@ public class RecursionQuickSort {
 
     public static void main(String[] args) {
         RecursionQuickSort recursionQuickSort = new RecursionQuickSort();
-        int example1[] = {4,25,72,2,1,90,67,23,1,0,-1};
-        recursionQuickSort.quickSort(example1, 0, example1.length-1);
-        System.out.println(Arrays.toString(example1));
-
-        int example2[] = {4};
-        recursionQuickSort.quickSort(example2, 0, example2.length-1);
-        System.out.println(Arrays.toString(example2));
+//        int example1[] = {4,25,72,2,1,90,67,23,1,0,-1,3};
+//        recursionQuickSort.quickSort(example1, 0, example1.length-1);
+//        System.out.println(Arrays.toString(example1));
+//
+//        int example2[] = {4};
+//        recursionQuickSort.quickSort(example2, 0, example2.length-1);
+//        System.out.println(Arrays.toString(example2));
 
         int example3[] = {4,2};
         recursionQuickSort.quickSort(example3, 0, example3.length-1);
