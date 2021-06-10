@@ -81,7 +81,7 @@ public class Solution20ValidParenthesis {
         Solution20ValidParenthesis solution = new Solution20ValidParenthesis();
         System.out.println(solution.isValid("()[]{}"));
         System.out.println(solution.isValid("(]"));
-        System.out.println(solution.isValid("(]"));
+        System.out.println(solution.isValid("([][][][][]{}{}{}{})"));
         System.out.println(solution.isValid("{[]}"));
     }
 }
