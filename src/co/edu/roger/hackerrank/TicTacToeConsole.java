@@ -1,4 +1,4 @@
-package co.edu.roger.hacerrank;
+package co.edu.roger.hackerrank;
 
 import java.util.InputMismatchException;
 import java.util.Random;
