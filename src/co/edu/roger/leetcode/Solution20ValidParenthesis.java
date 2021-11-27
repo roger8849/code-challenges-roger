@@ -46,12 +46,12 @@ public class Solution20ValidParenthesis {
     **/
     public boolean isValid(String s) {
         Stack<Character> parenthesisStack = new Stack<>();
-        List<Character> openers = new ArrayList<>(){{
+        List<Character> openers = new ArrayList<Character>(){{
             add('(');
             add('[');
             add('{');
         }};
-        List<Character> closers = new ArrayList<>(){{
+        List<Character> closers = new ArrayList<Character>(){{
             add(')');
             add(']');
             add('}');

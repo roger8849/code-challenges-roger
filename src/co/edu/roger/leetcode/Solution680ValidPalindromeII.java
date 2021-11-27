@@ -35,7 +35,7 @@ public class Solution680ValidPalindromeII {
     }
 
     /**
-     * Main function will check entirely if is palíndrome.
+     * co.edu.roger.test.Main function will check entirely if is palíndrome.
      * @param s
      * @return
      */
