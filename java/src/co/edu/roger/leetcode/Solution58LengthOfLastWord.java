@@ -26,6 +26,6 @@ public class Solution58LengthOfLastWord {
 
     public static void main(String[] args) {
         Solution58LengthOfLastWord solution = new Solution58LengthOfLastWord();
-
+        
     }
 }
