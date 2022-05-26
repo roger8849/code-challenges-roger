@@ -68,6 +68,10 @@ public class Solution150EvaluateReversePolishNotation {
         String example2[] = {"4", "13", "5", "/", "+"};
         System.out.println("Example: " + Arrays.toString(example2));
         System.out.println("Result: " + solution.evalRPN(example2));
+        
+        String example3[] = {"10","6","9","3","+","-11","*","/","*","17","+","5","+"};
+        System.out.println("Example: " + Arrays.toString(example3));
+        System.out.println("Result: " + solution.evalRPN(example3));
     }
 
 }
