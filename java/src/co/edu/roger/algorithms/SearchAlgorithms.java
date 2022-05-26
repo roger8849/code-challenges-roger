@@ -1,7 +1,5 @@
 package co.edu.roger.algorithms;
 
-import java.util.Arrays;
-
 public class SearchAlgorithms {
 
     /**
