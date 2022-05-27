@@ -1,9 +1,6 @@
 package co.edu.roger.leetcode;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
 
 /**
  * Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
