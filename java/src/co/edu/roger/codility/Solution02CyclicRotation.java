@@ -1,7 +1,6 @@
 package co.edu.roger.codility;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /*
     An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one
