@@ -45,7 +45,7 @@ import java.util.Scanner;
  */
 public class Solution02CyclicRotation {
 
-    private static final Scanner scanner = new Scanner(System.in);
+    // private static final Scanner scanner = new Scanner(System.in);
 
     public int[] solution(int[] A, int K){
 

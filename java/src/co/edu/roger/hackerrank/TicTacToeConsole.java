@@ -1,6 +1,7 @@
 package co.edu.roger.hackerrank;
 
 import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -148,6 +149,8 @@ public class TicTacToeConsole {
                 System.out.println("Please enter a number between 1 and " + BOARD_SIZE + ".");
                 s.next();  // Get next line so we start fresh
                 move = -1;
+            } finally{
+                if (Objects.nonNull(s)) s.close();
             }
         }
 
