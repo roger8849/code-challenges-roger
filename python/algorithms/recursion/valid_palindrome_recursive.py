@@ -17,7 +17,7 @@ def main():
     n = len(a)
     print(f'Array a = {a} is palindrome {is_palindrome(a, 0, n-1)}')
     b = [1,2,6,4,5,6]
-    n = len(a)
+    n = len(b)
     print(f'Array b = {b} is palindrome {is_palindrome(b, 0, n-1)}')
     c = [2]
     n = len(c)
