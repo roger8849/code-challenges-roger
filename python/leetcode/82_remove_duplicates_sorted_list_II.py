@@ -14,10 +14,14 @@ class Solution:
         if not head or not head.next: return head
         
         while head:
-            while head and head.next and head.val == head.next.val:
-                head.next = head.next.next
+            if head and head.next and head.val == head.next.val:
+                while head.next and head.val == head.next.val:
+                    head.next = head.next.next
+                prev.next = head.next
+            else:
+                prev = prev.next
             head = head.next
-        return helper_head
+        return dummy_head.next
 
 def main():
     solution = Solution()
