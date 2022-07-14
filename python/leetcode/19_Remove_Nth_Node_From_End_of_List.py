@@ -46,11 +46,15 @@ class Solution:
         right_index = head
         for i in range(n):
             right_index = right_index.next
+        # If the nth last element then we return next to remove first element
         if not right_index:
             return left_index.next
+
+        # Finding the nth last node in the LL
         while right_index.next:
             left_index = left_index.next
             right_index = right_index.next
         else:
+            # Once the node has been found then delete the node.s
             left_index.next = left_index.next.next
         return head
