@@ -31,10 +31,11 @@ nums contains distinct values sorted in ascending order.
 
 from typing import List
 
+
 class Solution:
     # Using python built in functions.
     def searchInsertBuilIn(self, nums: List[int], target: int) -> int:
-        #Insert the element
+        # Insert the element
         nums.append(target)
         # sort the new element
         nums.sort()
@@ -44,13 +45,13 @@ class Solution:
     # Use of binary iterative to find the element and/or the insert index
     def searchInsert(self, nums: List[int], target: int) -> int:
         low = 0
-        high = len(nums) -1
+        high = len(nums) - 1
         mid = 0
         while low <= high:
             mid = (high+low) // 2
             # if target is greater, ignore left half
             if nums[mid] < target:
-                low = mid + 1 
+                low = mid + 1
             # if target is smaller, ignore right half
             elif nums[mid] > target:
                 high = mid - 1
@@ -60,16 +61,18 @@ class Solution:
         # If the element is not found then should be inserted in low. because low > high.
         return low
 
+
 def main():
     solution = Solution()
     print('--- Built in functions ---')
-    print(solution.searchInsert([1,3,5,6],5))
-    print(solution.searchInsert([1,3,5,6],2))
-    print(solution.searchInsert([1,3,5,6],7))
+    print(solution.searchInsert([1, 3, 5, 6], 5))
+    print(solution.searchInsert([1, 3, 5, 6], 2))
+    print(solution.searchInsert([1, 3, 5, 6], 7))
     print('--- Binary Search ---')
-    print(solution.searchInsert([1,3,5,6],5))
-    print(solution.searchInsert([1,3,5,6],2))
-    print(solution.searchInsert([1,3,5,6],7))
+    print(solution.searchInsert([1, 3, 5, 6], 5))
+    print(solution.searchInsert([1, 3, 5, 6], 2))
+    print(solution.searchInsert([1, 3, 5, 6], 7))
+
 
 if __name__ == "__main__":
     main()
