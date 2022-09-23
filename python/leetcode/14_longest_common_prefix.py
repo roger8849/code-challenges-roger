@@ -32,7 +32,7 @@ def longestCommonPrefix(strs: List[str]) -> str:
     #Base case if the list is empty
     if len(strs) == 0: return common_prefix
     #2nd. base case if the list has 1 element, then the element is the longest common prefix
-    if len(strs) == 0: return strs[0]
+    if len(strs) == 1: return strs[0]
 
     base_string = strs[0]
     print(range(len(base_string)))
@@ -42,7 +42,7 @@ def longestCommonPrefix(strs: List[str]) -> str:
         for j in range(1, len(strs)):
             # 1st part of the condition make sure that we don't have a index out of bounds.
             # 2nd part of the condition to see if we found the longest commond prefix
-            if i >=len(strs[j]) or letter != strs[j][i] :
+            if i >=len(strs[j]) or letter != strs[j][i]:
                 return common_prefix
         common_prefix += letter
     
@@ -51,7 +51,7 @@ def longestCommonPrefix(strs: List[str]) -> str:
 
 
 def main():
-    print(longestCommonPrefix(["flower","flow","flight"]))
+    assert longestCommonPrefix(["flower","flow","flight"]) == "fl"
 
 if __name__ == "__main__":
     main()

@@ -60,8 +60,8 @@ class Solution:
         for num in nums:
             # if number is not the val
             if num != val:
-                nums[left] = num
                 # move the left index and assign the current num
+                nums[left] = num
                 left += 1
         return left
 
