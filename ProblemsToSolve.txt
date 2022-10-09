@@ -1,0 +1,8 @@
+find permutatioms o s in b
+rectangle with biggest sum
+can build ransom note
+
+
+
+
+------- NOTES ------
