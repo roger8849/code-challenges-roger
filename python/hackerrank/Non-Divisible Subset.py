@@ -33,7 +33,7 @@ def nonDivisibleSubset(k, s):
     ans = min(count[0], 1)
 
     # Second case when k is even then (k//2 + k//2)  % k  ==0 then only take 1 number.
-    if k%2 == 0:
+    if k % 2 == 0:
         ans += min(count[k//2], 1)
 
     for i in range(1, k//2 + 1): #Check for pairs and take the appropiate count.
