@@ -22,7 +22,18 @@ from typing import List
 #
 
 def searchNum(arr, start, end, k):
-    
+    """
+    _summary_
+
+    Args:
+        arr (_type_): _description_
+        start (_type_): _description_
+        end (_type_): _description_
+        k (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     while start <= end:
         mid = start + (end -start)//2
         if arr[mid] == k:
