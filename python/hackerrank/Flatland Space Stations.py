@@ -37,8 +37,6 @@ if __name__ == '__main__':
     20 5
     13 1 11 10 6
     6
-
-
     '''
 
     fptr.write(str(result) + '\n')
