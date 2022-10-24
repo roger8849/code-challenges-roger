@@ -28,12 +28,10 @@ def caesarCipher(s, k):
         if letter.isalpha():
             aIncrement = ord('A') if letter.isupper() else ord('a')
             val = ord(letter) - aIncrement + newAscii
-            
-            newS =  (
-                    newS + chr(val-26 + aIncrement) if val >= 26 
-                    else newS + chr(val + aIncrement)
-                    )
-                            
+            newS = (
+                newS + chr(val-26 + aIncrement) if val >= 26 
+                else newS + chr(val + aIncrement)
+            )
         else:
             newS += letter
     return newS
