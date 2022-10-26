@@ -21,7 +21,7 @@ def theLoveLetterMystery(s):
     # Write your code 
     start, end = 0, len(s)-1
     res = 0
-    while start <=end:
+    while start <= end:
         res += abs(ord(s[start])-ord(s[end]))
         start , end = start + 1, end -1
     return res
