@@ -22,7 +22,7 @@ import sys
 
 def luckBalance(k, contests):
     # Write your code here
-    # print(contests)
+    
     n = len(contests)
     nonImportantLuck = sum([contests[i][0] for i in range(n) if contests[i][1] != 1])
     importants = [contests[i][0] for i in range(n) if contests[i][1] == 1]
