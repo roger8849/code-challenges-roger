@@ -29,10 +29,6 @@ def quickSort(arr, start, end, ascending=True):
     quickSort(arr, start, partitionIdx - 1, ascending)
     quickSort(arr, partitionIdx, end, ascending)
 
-
-
-
-
 def main():
 	array = [4,5,3,1,2]
 	quickSort(array,0, len(array)-1)
