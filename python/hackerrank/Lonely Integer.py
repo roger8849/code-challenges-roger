@@ -26,8 +26,7 @@ def lonelyinteger(a):
             uniques.remove(num)
         else:
             uniques.add(num)
-    res = list(uniques)
-    return res[0]
+    return next(iter(uniques))
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
