@@ -54,3 +54,4 @@ class Solution:
     
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         return self.isSameSymmetricTree(root.left, root.right)
+        

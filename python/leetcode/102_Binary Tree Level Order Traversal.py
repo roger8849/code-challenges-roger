@@ -37,7 +37,41 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+class Node:
+    def __init__(self, key):
+        self.data = key
+        self.left = None
+        self.right = None
 class Solution:
+    def LevelOrder(self,root):
+        h = self.height(root)
+        for i in range(1, h+1):
+            self.CurrentLevel(root, i)
+    def CurrentLevel(self,root , level):
+        if root is None:
+            return
+        if level == 1:
+            print(root.data,end=" ")
+        elif level > 1 :
+            self.CurrentLevel(root.left , level-1)
+            self.CurrentLevel(root.right , level-1)
+    def height(self,node):
+        if node is None:
+            return 0
+        else :
+            lheight = self.height(node.left)
+            rheight = self.height(node.right)
+            if lheight > rheight :
+                return lheight+1
+            else:
+                return rheight+1
+    root = Node(1)
+    root.left = Node(2)
+    root.right = Node(3)
+    root.left.left = Node(4)
+    root.left.right = Node(5)
+    LevelOrder(root)
+    
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         result, levelArray, helperQueue = [], [], []
         if not root:
@@ -67,6 +101,7 @@ class Solution:
                 if helperQueue:
                     helperQueue.append(None)
         return result
+        
 def main():
     sol = Solution()
     root = TreeNode(1)
