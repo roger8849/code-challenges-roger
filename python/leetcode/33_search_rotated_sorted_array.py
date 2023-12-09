@@ -63,7 +63,11 @@ class Solution:
 
 def main():
     solution = Solution()
-    nums, target = [4,5,6,7,0,1,2], 0
+    # nums, target = [4,5,6,7,0,1,2], 0
+    # print(f'Num {target} is in index {solution.search(nums, target)} of array {nums}')
+
+
+    nums, target = [3,1], 1
     print(f'Num {target} is in index {solution.search(nums, target)} of array {nums}')
 
 if __name__ == "__main__":
