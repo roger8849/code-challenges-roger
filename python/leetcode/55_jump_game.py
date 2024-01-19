@@ -17,6 +17,10 @@ def main():
     print(f'Can reach last index in {nums} = {solution.canJump(nums)}')
     nums = [3,2,1,0,4]
     print(f'Can reach last index in {nums} = {solution.canJump(nums)}')
+    nums = [30,2,1,0,4]
+    print(f'Can reach last index in {nums} = {solution.canJump(nums)}')
+    nums = [4,2,1,0,10,4]
+    print(f'Can reach last index in {nums} = {solution.canJump(nums)}')
 
 if __name__ == "__main__":
     main()
