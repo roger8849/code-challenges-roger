@@ -42,12 +42,14 @@ class Solution:
     def reverseWords(self, s: str) -> str:
         temp_string=""
         result=""
+        # add a space for the last word to know when to stop.
         s+=" "
         for letter in s:
+            # If letter is space and temp_string is filled, then the word scan is over.
             if (letter==" " and temp_string != "") :
                 result=temp_string+" "+result
                 temp_string=""
-
+            # If letter is not an space then keep scanning current word.
             elif (letter!=" "):
                 temp_string+=letter
 
