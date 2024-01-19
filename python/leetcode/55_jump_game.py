@@ -8,9 +8,9 @@ class Solution:
         for i in range(size-2, -1, -1):
             if i + nums[i] >= good_pos:
                 good_pos = i
-        if good_pos == 0:
-            return True 
-        else: return False
+
+        return True if good_pos == 0 else False
+        
 def main():
     solution = Solution()
     nums = [2,3,1,1,4]
