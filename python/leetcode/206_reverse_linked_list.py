@@ -50,10 +50,10 @@ class Solution:
         previous, current, next = None, head, None
         # While there is still elements in the list
         while current:
-            next = current.next
-            current.next = previous
-            previous = current
-            current = next
+            next = current.next # Save the next element before breaking the reference
+            current.next = previous # Reverse the link
+            previous = current # Move forward
+            current = next # Move forward to the saved next
         return previous
 
 
