@@ -94,25 +94,27 @@ class Solution:
 
 
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        a_size = self.getListSize(headA)
-        b_size = self.getListSize(headB)
+        a_size = self.getListSize(headA) # find the size of the first linked list.
+        b_size = self.getListSize(headB) # find the size of the second linked list.
+
+        difference = int()
         
         # This portion of code put both elements in the same start
-        if a_size > b_size:
+        if a_size > b_size: # If linked list A is bigger then jump the positions
             difference = a_size - b_size
             for i in range(difference):
                 headA = headA.next
         elif b_size > a_size:
-            difference = b_size - a_size
+            difference = b_size - a_size # If linked list B is bigger then jump the positions
             for i in range(difference):
                 headB = headB.next
-
+        # The two linked list are at the same position then iterate both at the same time to find the intersection.
         while headA is not None:
             if headA == headB:
                 return headA
             headA = headA.next
             headB = headB.next
-        
+        # No intersection found then return None
         return None
 
 def main():
