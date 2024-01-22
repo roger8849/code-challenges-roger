@@ -23,6 +23,7 @@ The number of nodes in the tree is in the range [0, 2000].
 '''
 # Definition for a binary tree node.
 from typing import List, Optional
+import collections
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -31,28 +32,34 @@ class TreeNode:
         self.right = right
 class Solution:
     def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
-        result, levelArray, helperStack = [], [], []
+        result, levelArray, helperStack = [], [], collections.deque()
         if not root:
              return result
-        helperStack.insert(0, root)
-        helperStack.insert(0, None)
+        
+        helperStack.appendleft(root)
+        helperStack.appendleft(None)
+        # helperStack.insert(0, root)
+        # helperStack.insert(0, None)
 
         while helperStack:
             topElement = helperStack.pop()
             if topElement:
                 levelArray.append(topElement.val)
                 if topElement.left:
-                    helperStack.insert(0, topElement.left)
+                    helperStack.appendleft(topElement.left)
+                    # helperStack.insert(0, topElement.left)
                 if topElement.right:
-                    helperStack.insert(0, topElement.right)
+                    helperStack.appendleft(topElement.right)
+                    # helperStack.insert(0, topElement.right)
             else:
                 if levelArray:
-                    result.insert(0, levelArray)
+                    result.append(levelArray)
 
                 levelArray = []
 
                 if helperStack:
-                    helperStack.insert(0, None)
+                    helperStack.appendleft(None)
+                    # helperStack.insert(0, None)
         return result
 
 def main():
@@ -67,6 +74,7 @@ def main():
     root.right.right = TreeNode(5)
 
     result = sol.levelOrderBottom(root)
+    result.reverse()
     assert result == [[4,5], [2,3], [1]]
 
 

@@ -81,6 +81,7 @@ class Solution:
                     fast = fast.next
                 else:
                     # They met at the intersection due a mathematical formula
+                    # fast pointer - slow pointer is the size of the loop.
                     return slow
         else:
             return None

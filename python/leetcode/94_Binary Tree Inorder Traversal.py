@@ -40,9 +40,9 @@ class Solution:
     def inorderTraversalHelper(self, root: Optional[TreeNode], traversalList: List) -> _void:
         if root == None:
             return 
-        self.inorderTraversalHelper(root.left, traversalList)
-        traversalList.append(root.val)
-        self.inorderTraversalHelper(root.right, traversalList)
+        self.inorderTraversalHelper(root.left, traversalList) # Visit left subtree
+        traversalList.append(root.val) # Visit the data
+        self.inorderTraversalHelper(root.right, traversalList) # Visit right subtree
 
         
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
