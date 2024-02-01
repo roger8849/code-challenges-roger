@@ -56,9 +56,9 @@ class Solution:
         if not root:
             return 0,0
         # Calculate left subtree
-        leftHeight, leftDiameter = self.diameterHeight(root.left)
+        leftHeight, leftDiameter = self.heightDiameter(root.left)
         # Calculate right subtree
-        rightHeight, rightDiameter = self.diameterHeight(root.right)
+        rightHeight, rightDiameter = self.heightDiameter(root.right)
 
         # Height of tree is 1 + the max of left and right
         height = 1 + max(leftHeight, rightHeight)
@@ -68,8 +68,8 @@ class Solution:
         # The tree is left dominant, means biggest diameter is in the left
         # The tree is right dominant, means biggest diameter is in the left
         diameter = max(leftHeight + rightHeight, leftDiameter, rightDiameter)
-
         return height, diameter
+
 
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         _, diameter = self.heightDiameter(root)
