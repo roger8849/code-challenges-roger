@@ -51,14 +51,24 @@ class Solution:
         option2 = self.diameterOfBinaryTreeInefficient(root.left)
         option3 = self.diameterOfBinaryTreeInefficient(root.right)
         return max(option1, option2, option3)
-    def heightDiameter(self, root: TreeNode):
-        if root == None:
-            return 0, 0
-        leftH, leftD = self.heightDiameter(root.left)
-        rightH, rightD = self.heightDiameter(root.right)
+    def heightDiameter(self, root: Optional[TreeNode]) -> int:
+        # No more leafs left, then return 0
+        if not root:
+            return 0,0
+        # Calculate left subtree
+        leftHeight, leftDiameter = self.diameterHeight(root.left)
+        # Calculate right subtree
+        rightHeight, rightDiameter = self.diameterHeight(root.right)
 
-        height = 1 + max(leftH, rightH)
-        diameter = max(leftH + rightH, leftD, rightD)
+        # Height of tree is 1 + the max of left and right
+        height = 1 + max(leftHeight, rightHeight)
+
+        # Diameter is one of tree cases:
+        # Going through root the height of left subtree and right subtree
+        # The tree is left dominant, means biggest diameter is in the left
+        # The tree is right dominant, means biggest diameter is in the left
+        diameter = max(leftHeight + rightHeight, leftDiameter, rightDiameter)
+
         return height, diameter
 
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
