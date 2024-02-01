@@ -45,11 +45,11 @@ class Solution:
         self.inorderHelper(root.left, count, ans, k)
         count[0] += 1
         if count == k:
-            ans[0]= root.val
+            ans = root.val
             return
         self.inorderHelper(root.right, count, ans, k)
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        count, answer = [0], [-1]
+        count, answer = [0], -1
         self.inorderHelper(root, count, answer, k)
-        return answer[0]
+        return answer
         
