@@ -82,11 +82,12 @@ class Solution:
 
         for num in A:
             if len(largest) == B:
-                minNum = heappop(largest)
-                if num > minNum:
-                    heappush(largest, num)
-                else:
-                    heappush(largest, minNum)
+                # minNum = heappop(largest)
+                # if num > minNum:
+                #     heappush(largest, num)
+                # else:
+                #     heappush(largest, minNum)
+                heappush(largest, max(num, heappop(largest)))
             else:
                 heappush(largest, num)
 
