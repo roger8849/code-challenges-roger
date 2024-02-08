@@ -3,6 +3,28 @@ Implements the Fibonacci series using recursion
 '''
 from timeit import default_timer as timer
 
+def fibonacciDynamicProgramming(n: int) -> int:
+    """Implements dynamic programming for fibonacci problem using only 2 variables.
+
+    Args:
+        n (int): nth fibonacci number to calculate
+
+    Returns:
+        int: Fibonacci of (n)
+    """
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    
+    nMinus1, nMinus2, result = 1, 0, 0
+    
+    for _ in range(2, n+1):
+        result = nMinus1 + nMinus2
+        nMinus2, nMinus1 = nMinus1, result
+    return result
+    
+
 # To avoid exponential complexity then memorize the values already calculated to reduce the time
 def fibonacciMemorization(n: int, mem) -> int :
     # If memory contains value return it
@@ -40,6 +62,13 @@ def main():
     start=timer()
     # Base case
     mem = {0:0, 1:1}
+    print(f'nˆth fibonnacci number is {fibonacciMemorization(n, mem)}')
+    end=timer()
+    print(f'Time in seconds {(end-start):.10f}')
+    
+    
+    print('--- Memorization only 2 variables method ---')
+    start=timer()
     print(f'nˆth fibonnacci number is {fibonacciMemorization(n, mem)}')
     end=timer()
     print(f'Time in seconds {(end-start):.10f}')

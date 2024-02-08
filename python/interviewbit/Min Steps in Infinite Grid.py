@@ -56,24 +56,39 @@ Explanation 1:
 '''
 
 class Solution:
-    # @param A : list of integers
-    # @param B : list of integers
-    # @return an integer
-    def coverPoints(self, A, B):
+    def coverPoints(self, X, Y):
+        """Implements the solution of the minimum steps to go from (x1, y1) to (xn, yn)
+        
+        where (xi,yi) = (A[i], B[i]).
+        
+        Solution:
+        
+        It's a mathematical formula that stands that we need to try to always move in diagonal
+        then after moving in diagonal we move in four directions: up, down, right, left. Basically the algorithm
+        stands that the minimum steps to go from x(i), y(i) to x(i+1), y(i+1)
+        is the maximum(abs(x_i - x_i+1), abs(y_i - y_+1))
+
+        Args:
+            X (_type_): points in the X Axis
+            Y (_type_): points in the Y Axis
+
+        Returns:
+            _type_: minimum number of steps to go from x1,y1 to xn, yn
+        """        
         ans = 0
-        for i in range(len(A) - 1):
-            ans = max(abs(A[i+1]-A[i]), abs(B[i+1]-B[i]))
+        for i in range(len(X) - 1):
+            ans += max(abs(X[i+1]-X[i]), abs(Y[i+1]-Y[i]))
         return ans
 def main():
-    A = [0, 1, 1]
-    B = [0, 1, 2]
+    X = [0, 1, 1]
+    Y = [0, 1, 2]
     solution = Solution()
 
-    assert solution.coverPoints(A,B) == 2
+    assert solution.coverPoints(X,Y) == 2
 
-    A = [-2]
-    B = [-7]
-    assert solution.coverPoints(A,B) == 0
+    X = [-2]
+    Y = [-7]
+    assert solution.coverPoints(X,Y) == 0
 
 
 
