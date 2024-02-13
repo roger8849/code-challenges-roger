@@ -46,8 +46,7 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 class Solution:
     def romanToInt(self, s: str) -> int:
-        sum = int()
-        roman_symbols = {
+        roman_values = {
             'I': 1,
             'V': 5,
             'X': 10,
@@ -56,16 +55,17 @@ class Solution:
             'D': 500,
             'M': 1000
         }
-        size = len(s)
-        for i in range(size):
-            val_1 = roman_symbols[s[i]]
-            # If there is no next element then it's value is 0.
-            val_2 = 0 if i == size - 1 else roman_symbols[s[i+1]]
-            # If the next value is larger then val_1 is negative.
-            if val_1 < val_2:
-                val_1 *=-1
-            sum += val_1 
-        return sum
+        
+        res = 0
+        for i, letter in enumerate(s):
+            left_val = roman_values[letter]
+            right_val = 0 if i+1 == len(s) else roman_values[s[i+1]]
+            
+            # if left value is less than right value is because should decrease the value not increase it.
+            if left_val < right_val:
+                left_val = -left_val
+            res += left_val
+        return res
 
 def main():
     solution = Solution()
