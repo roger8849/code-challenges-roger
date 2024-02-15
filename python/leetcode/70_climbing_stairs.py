@@ -41,8 +41,23 @@ class Solution:
         return memory[n]
         
     def climbStairs(self, n: int) -> int:
-        memory = {0:0, 1:1, 2:2}
+        memory = {0:1, 1:1, 2:2}
         return self.climbStairsHelper(n, memory)
+
+    def climbStairsDP(self, n: int) -> int:
+        dp = list()
+        if n == 0: return 0
+        if n == 1: return 1
+        if n == 2: return 2
+        # dp represents n-1 and n-2
+        dp = [1,1]
+        
+        for i in range(2, n+1):
+            ans = dp[0] + dp[1]
+            dp[0] = dp[1]
+            dp[1] = ans
+
+        return ans
 
 
 def main():
