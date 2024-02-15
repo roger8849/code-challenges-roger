@@ -52,6 +52,20 @@ class Solution:
             # else then increase the index to keep looking.
             left, right = left + 1, right + 1
         return index
+    
+    def strStrOneIndex(self, haystack: str, needle: str) -> int:
+        small_size = len(needle)
+        n = len(haystack)
+
+        for i in range(n):
+            if i + small_size <= n:
+                small_hay = haystack[i:i+small_size]
+                # print(small_hay)
+                if small_hay == needle:
+                    return i
+            else:
+                return -1
+        return -1
 
 def main():
     solution = Solution()
